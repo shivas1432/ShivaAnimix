@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShivaAnimix - Animation Component Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="logo">
+                <div class="logo-icon"></div>
+                ShivaAnimix
+            </div>
+            <div class="search-container">
+                <div class="search-icon">🔍</div>
+                <input type="text" class="search-input" placeholder="Search animations..." id="searchInput">
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <a href="https://github.com/shivas1432" class="github-btn" target="_blank">
+                <span>⭐</span> GitHub
+            </a>
+        </div>
+    </header>
+
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Animations</h3>
+                    <ul class="sidebar-items" id="sidebarItems">
+                        <li class="sidebar-item">
+                            <div class="loading-sidebar">
+                                <div class="spinner-small"></div>
+                                <span>Loading animations...</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1 class="content-title" id="contentTitle">Welcome to ShivaAnimix</h1>
+                <p class="content-subtitle" id="contentSubtitle">Select an animation from the sidebar to preview</p>
+                
+                <div class="content-tabs">
+                    <button class="tab-btn active" data-tab="preview">
+                        <span>👁️</span> Preview
+                    </button>
+                    <button class="tab-btn get-code-btn" data-tab="code" id="getCodeBtn" disabled>
+                        <span>📝</span> Get Code
+                    </button>
+                </div>
+            </div>
+
+            <div class="preview-container">
+                <!-- Preview Tab -->
+                <div class="tab-content active" id="preview-tab">
+                    <div class="preview-area">
+                        <div class="preview-header">
+                            <div class="preview-controls">
+                                <button class="control-btn" title="Refresh" onclick="refreshPreview()">🔄</button>
+                                <button class="control-btn" title="Fullscreen" onclick="toggleFullscreen()">⛶</button>
+                                <button class="control-btn active" title="Responsive">📱</button>
+                            </div>
+                        </div>
+                        <div class="preview-content" id="previewContent">
+                            <div class="welcome-placeholder">
+                                <div class="placeholder-icon">🚀</div>
+                                <div class="placeholder-text">ShivaAnimix</div>
+                                <div class="placeholder-subtext">Select an animation from the sidebar to see the live preview</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
